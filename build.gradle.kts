@@ -1,6 +1,6 @@
 plugins {
-	alias(libs.plugins.kotlin) apply false
 	alias(libs.plugins.fabric) apply false
+	alias(libs.plugins.kotlin) apply false
 }
 
 val mavenGroup = properties["group"]!!.toString()
