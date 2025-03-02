@@ -1,8 +1,8 @@
 {
   "required": true,
   "minVersion": "0.8",
-  "package": "net.fabricmc.example.mixin",
-  "compatibilityLevel": "JAVA_21",
+  "package": "com.example.modid.mixin",
+  "compatibilityLevel": "JAVA_${jvm}",
   "mixins": [
   ],
   "client": [

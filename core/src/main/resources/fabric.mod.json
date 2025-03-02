@@ -10,7 +10,7 @@
   ],
   "contact": {
     "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
+    "sources": "https://github.com/Laxystem/fabric-example-mod"
   },
 
   "license": "CC0-1.0",
@@ -21,7 +21,7 @@
     "main": [
       {
         "adapter": "kotlin",
-        "value": "net.fabricmc.example.ExampleMod"
+        "value": "com.example.modid.ExampleMod"
       }
     ]
   },
@@ -30,11 +30,11 @@
   ],
 
   "depends": {
-    "fabricloader": ">=${loader_version}",
+    "fabricloader": ">=${loader}",
     "fabric-api": "*",
-    "minecraft": "~${minecraft_version}",
-    "java": ">=21",
-    "fabric-language-kotlin": ">=${fabric_kotlin_version}"
+    "minecraft": "~${minecraft}",
+    "java": ">=${jvm}",
+    "fabric-language-kotlin": ">=${fabric_kotlin}"
   },
   "suggests": {
     "another-mod": "*"

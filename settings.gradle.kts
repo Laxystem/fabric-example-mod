@@ -1,20 +1,16 @@
-rootProject.name = "fabric-example-mod-kotlin-with-kotlin-dsl"
-pluginManagement {
-    repositories {
-        maven("https://maven.fabricmc.net/") {
-            name = "Fabric"
-        }
-        mavenCentral()
-        gradlePluginPortal()
-    }
+rootProject.name = "fabric-example-mod-kotlin"
+enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 
-    val loom_version: String by settings
-    val fabric_kotlin_version: String by settings
-    plugins {
-        id("fabric-loom") version loom_version
-        id("org.jetbrains.kotlin.jvm") version
-                fabric_kotlin_version
-                    .split("+kotlin.")[1] // Grabs the sentence after `+kotlin.`
-                    .split("+")[0] // Ensures sentences like `+build.1` are ignored
-    }
+include(
+	"core",
+	// you can add more subprojects, e.g.
+	// "library",
+)
+
+pluginManagement.repositories {
+	maven(url = "https://maven.fabricmc.net/") {
+		name = "Fabric"
+	}
+	mavenCentral()
+	gradlePluginPortal()
 }
